@@ -10,10 +10,10 @@ export const blogRouter = new Hono<{
   };
 }>();
 
-blogRouter.use("/*", (c, next) => {
-  //This middleware will extract the userId and pass it down to the route handler.
-  next();
-});
+// blogRouter.use("/*", (c, next) => {
+//   //This middleware will extract the userId and pass it down to the route handler.
+//   next();
+// });
 
 blogRouter.post("/", async (c) => {
   const body = await c.req.json();
